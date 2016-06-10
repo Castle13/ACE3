@@ -1,13 +1,13 @@
 class CfgCloudlets {
     class Default;
     class ACE_SmokeBaseLarge: Default {
-        animationSpeedCoef = 1;
+        colorCoef[] = {"colorR", "colorG", "colorB", "colorA"};
         sizeCoef = 1;
         position[] = {0, 0, 0};
         interval = 0.05;
         circleRadius = 0;
         circleVelocity[] = {0, 0, 0};
-        particleShape = "\A3\data_f\ParticleEffects\Universal\smoke";
+        particleShape = QUOTE(PATHTOF(data\smoke.p3d));
         particleFSNtieth = 1;
         particleFSIndex = 0;
         particleFSFrameCount = 1;
@@ -19,6 +19,7 @@ class CfgCloudlets {
         lifeTime = 30;
         lifeTimeVar = 2;
         animationSpeed[] = {1};
+        animationSpeedCoef = 1;
         randomDirectionPeriod = 1;
         randomDirectionPeriodVar = 0;
         randomDirectionIntensity = 0.2;
@@ -26,42 +27,32 @@ class CfgCloudlets {
         destroyOnWaterSurface = 1;
         destroyOnWaterSurfaceOffset = -0.6;
         positionVar[] = {0, 0, 0};
-        MoveVelocityVar[] = {0.25, 0.25, 0.25};
+        moveVelocityVar[] = {0.25, 0.25, 0.25};
         colorVar[] = {0, 0, 0, 0};
         color[] = {
-            {0.5, 0.5, 0.5, 1},
             {0.8, 0.8, 0.8, 1},
-            {0.8, 0.8, 0.8, 0.75},
+            {0.8, 0.8, 0.8, 0.7},
             {0.8, 0.8, 0.8, 0.5},
-            {0.8, 0.8, 0.8, 0.15},
+            {0.8, 0.8, 0.8, 0.5},
+            {0.8, 0.8, 0.8, 0.1},
             {0.8, 0.8, 0.8, 0}
         };
-        size[] = {0.3, 5, 10, 20};
+        size[] = {0.05, 7, 15, 20};
         sizeVar = 0.5;
-        weight = 12.75;
+        weight = 1.2777;
         moveVelocity[] = {5, 0, 0};
         rotationVelocity = 0;
         rotationVelocityVar = 20;
-        volume = 10;
-        rubbing = 5;
+        volume = 1;
+        rubbing = 0.1;
         onTimerScript = "";
         beforeDestroyScript = "";
     };
     class ACE_SmokeBaseSmall: ACE_SmokeBaseLarge {
-        particleShape = "\A3\data_f\ParticleEffects\Universal\Universal";
-        particleFSNtieth = 16;
-        particleFSIndex = 12;
-        particleFSFrameCount = 8;
-        particleFSLoop = 0;
-        interval = 0.01;
-        size[] = {0.3, 5, 10, 10};
+        interval = 0.05;
+        size[] = {0.05, 5, 7.5, 10};
     };
     class ACE_SmokeJet: ACE_SmokeBaseLarge {
-        particleShape = "\A3\data_f\ParticleEffects\Universal\Universal";
-        particleFSNtieth = 16;
-        particleFSIndex = 12;
-        particleFSFrameCount = 8;
-        particleFSLoop = 0;
         interval = 0.01;
         lifeTime = 2;
         lifeTimeVar = 0;

@@ -1,23 +1,8 @@
-class ACE_SmokeShellWhiteEffect {
-    class ACE_SmokeBaseLarge {
-        simulation = "particles";
+class SmokeShellWhiteEffect {
+    class SmokeShell {
         type = "ACE_SmokeBaseLarge";
-        position[] = {0, 0, 0};
-        intensity = 1;
-        interval = 1;
     };
-    class ACE_SmokeBaseSmall {
-        simulation = "particles";
+    class SmokeShell2 {
         type = "ACE_SmokeBaseSmall";
-        position[] = {0, 0, 0};
-        intensity = 1;
-        interval = 1;
-    };
-    class ACE_SmokeJet {
-        simulation = "particles";
-        type = "ACE_SmokeJet";
-        position[] = {0, 0, 0};
-        intensity = 1;
-        interval = 1;
     };
 };
